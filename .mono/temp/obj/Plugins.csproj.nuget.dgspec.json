@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "restore": {
+    "L:\\Projects\\Games\\Plugins\\Plugins.csproj": {}
+  },
+  "projects": {
+    "L:\\Projects\\Games\\Plugins\\Plugins.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "L:\\Projects\\Games\\Plugins\\Plugins.csproj",
+        "projectName": "Plugins",
+        "projectPath": "L:\\Projects\\Games\\Plugins\\Plugins.csproj",
+        "packagesPath": "C:\\Users\\zen86\\.nuget\\packages\\",
+        "outputPath": "L:\\Projects\\Games\\Plugins\\.mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\zen86\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
