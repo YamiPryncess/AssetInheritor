@@ -1,16 +1,16 @@
-[gd_resource type="Theme" load_steps=29 format=2]
+[gd_resource type="Theme" load_steps=24 format=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.478431, 0, 0.698039, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.683333, 0, 1, 1 )
+bg_color = Color( 0.682353, 0, 1, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.478431, 0, 0.698039, 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.478333, 0, 0.7, 1 )
+bg_color = Color( 0.478431, 0, 0.701961, 1 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.478431, 0, 0.701961, 1 )
@@ -68,21 +68,6 @@ bg_color = Color( 0.273333, 0, 0.4, 1 )
 
 [sub_resource type="StyleBoxFlat" id=23]
 bg_color = Color( 0.273333, 0, 0.4, 1 )
-
-[sub_resource type="StyleBoxFlat" id=24]
-bg_color = Color( 0.478431, 0, 0.698039, 1 )
-
-[sub_resource type="StyleBoxFlat" id=25]
-bg_color = Color( 0.686275, 0, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=26]
-bg_color = Color( 0.686275, 0, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=27]
-bg_color = Color( 0.686275, 0, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=28]
-bg_color = Color( 0.686275, 0, 1, 1 )
 
 [resource]
 Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
@@ -147,14 +132,3 @@ PopupMenu/styles/labeled_separator_right = SubResource( 20 )
 PopupMenu/styles/panel = SubResource( 21 )
 PopupMenu/styles/panel_disabled = SubResource( 22 )
 PopupMenu/styles/separator = SubResource( 23 )
-ToolButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
-ToolButton/colors/font_color_disabled = Color( 0.9, 0.95, 1, 0.3 )
-ToolButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
-ToolButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
-ToolButton/constants/hseparation = 3
-ToolButton/fonts/font = null
-ToolButton/styles/disabled = SubResource( 24 )
-ToolButton/styles/focus = SubResource( 25 )
-ToolButton/styles/hover = SubResource( 26 )
-ToolButton/styles/normal = SubResource( 27 )
-ToolButton/styles/pressed = SubResource( 28 )

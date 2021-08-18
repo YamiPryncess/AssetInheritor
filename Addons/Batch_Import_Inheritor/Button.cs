@@ -1,27 +1,35 @@
+#if TOOLS
 using Godot;
 using System;
+[Tool]
+public class Button : Godot.Button {
+    float totalTime = 0;
+    bool setOff = false;
+    // string highlighted = "#ae00ff";
+    // string normal = "#7a00b3";
 
-public class Button : Godot.Button
-{
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
-    float totalTime;
-
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
-    {
+    public override void _Ready() {
         
     }
-
- // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta) {
-        if(HasFocus()) {
+        if(HasFocus() && setOff) {
             totalTime += delta;
-            if(totalTime >= .175) {
+            if(totalTime >= .0575) {
                 ReleaseFocus();
                 totalTime = 0;
+                setOff = false;
             }
         }
     }
+    public void _Button_Down() {
+        // GD.Print("Button Down");
+        // StyleBoxFlat styleBox = new StyleBoxFlat();
+        // styleBox.BgColor = new Godot.Color(highlighted);
+        // //AddStyleboxOverride("Normal", styleBox);
+    }
+    public void _Button_Up() {
+        setOff = true;
+    }
+
 }
+#endif

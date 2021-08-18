@@ -1,14 +1,17 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Addons/Batch_Import_Inheritor/Vector3Editor.cs" type="Script" id=1]
 
 [node name="Vector3Editor" type="VBoxContainer"]
 margin_top = 84.0
 margin_right = 278.0
 margin_bottom = 136.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox" type="CheckBox" parent="."]
+[node name="Alter" type="CheckBox" parent="."]
 margin_right = 278.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 0, 24 )
@@ -27,7 +30,7 @@ margin_right = 12.0
 margin_bottom = 19.0
 text = "X:"
 
-[node name="SpinBox" type="SpinBox" parent="HBox"]
+[node name="X" type="SpinBox" parent="HBox"]
 margin_left = 16.0
 margin_right = 90.0
 margin_bottom = 24.0
@@ -45,7 +48,7 @@ margin_right = 105.0
 margin_bottom = 19.0
 text = "Y:"
 
-[node name="SpinBox2" type="SpinBox" parent="HBox"]
+[node name="Y" type="SpinBox" parent="HBox"]
 margin_left = 109.0
 margin_right = 183.0
 margin_bottom = 24.0
@@ -63,7 +66,7 @@ margin_right = 199.0
 margin_bottom = 19.0
 text = "Z:"
 
-[node name="SpinBox3" type="SpinBox" parent="HBox"]
+[node name="Z" type="SpinBox" parent="HBox"]
 margin_left = 203.0
 margin_right = 278.0
 margin_bottom = 24.0

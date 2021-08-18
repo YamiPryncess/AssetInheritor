@@ -13,6 +13,10 @@ config_version=4
 config/name="Plugins"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/Batch_Import_Inheritor/plugin.cfg" )
+
 [importer_defaults]
 
 scene={

@@ -4,11 +4,12 @@ using System;
 
 [Tool]
 public class BatchInheritor : EditorPlugin {
-    Control dock;
+    PanelContainer dock;
     public override void _EnterTree() {
         //Spatial glb = (Spatial)GD.Load<PackedScene>("res://Assets/KenneyPlatformer/Source/block.glb").Instance();
-        //dock = (Control)GD.Load<PackedScene>("addons/my_custom_dock/my_dock.tscn").Instance();
-        AddControlToDock(DockSlot.LeftUl, dock);
+        dock = (PanelContainer)GD.Load<PackedScene>("Addons/Batch_Import_Inheritor/BII_UI.tscn").Instance();
+        AddControlToDock(DockSlot.LeftUr, dock);
+        
     }
     
     public override void _ExitTree() {
