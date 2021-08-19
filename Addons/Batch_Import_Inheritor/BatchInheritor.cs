@@ -7,7 +7,7 @@ public class BatchInheritor : EditorPlugin {
     PanelContainer dock;
     public override void _EnterTree() {
         //Spatial glb = (Spatial)GD.Load<PackedScene>("res://Assets/KenneyPlatformer/Source/block.glb").Instance();
-        dock = (PanelContainer)GD.Load<PackedScene>("Addons/Batch_Import_Inheritor/BII_UI.tscn").Instance();
+        dock = (PanelContainer)GD.Load<PackedScene>("Addons/Batch_Import_Inheritor/Inherit.tscn").Instance();
         AddControlToDock(DockSlot.LeftUr, dock);
         
     }
