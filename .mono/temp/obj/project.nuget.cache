@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tiRJ1vhcB4n4U3KNrHaYSgvI/rLYpuqRwYehB36QdKokYaYlCYndEKiT92Fm6qUVbsIKPiO01ByS1lgoRqV2lg==",
+  "dgSpecHash": "QEr6xca1FD6ghSKcfbxet6/bHYLARkP3K0eKBKJr8RUHmPIRiNsUyvUiyoZx4j0FDoy0OyB84FDFtCHZd5m7UQ==",
   "success": true,
   "projectFilePath": "L:\\Projects\\Games\\Plugins\\Plugins.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\zen86\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

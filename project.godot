@@ -15,7 +15,7 @@ config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Batch_Import_Inheritor/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Batch_Model_Inheritor/plugin.cfg" )
 
 [importer_defaults]
 
