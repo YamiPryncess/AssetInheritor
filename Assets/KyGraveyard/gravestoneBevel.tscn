@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "stone"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 338
 }
 
-[node name="gravestoneBevel" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.195, 0, -0.07475, -0.195, 0, 0.07475, -0.195, 0.0779474, -0.07475, 0.194962, 0, -0.07475, 0.194962, 0, 0.07475, -0.195, 0.0779474, 0.07475, 0.194962, 0.0779474, -0.07475, -0.173584, 0.461483, -0.0665404, -0.0847112, 0.546144, -0.0665404, -0.0598972, 0.565204, -0.0665404, -0.0309984, 0.577152, -0.0665404, -3.81619e-05, 0.581192, -0.0665404, 0.194962, 0.0779474, 0.07475, -0.173584, 0.461483, 0.0665257, -3.81619e-05, 0.581192, 0.0665257, -0.0309984, 0.577152, 0.0665257, -0.0598972, 0.565204, 0.0665257, -0.0847112, 0.546144, 0.0665257, 0.173545, 0.461483, -0.0665404, 0.0309603, 0.577152, -0.0665404, 0.0598591, 0.565204, -0.0665404, 0.0846731, 0.546144, -0.0665404, 0.173545, 0.461483, 0.0665257, 0.0846731, 0.546144, 0.0665257, 0.0598591, 0.565204, 0.0665257, 0.0309603, 0.577152, 0.0665257 )
+
+[node name="gravestoneBevel" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="gravestoneBevel" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "metal"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 328
 }
 
-[node name="fireBasket" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.0289537, 0.0879914, -0.136561, -0.136561, 0.0879914, -0.0289537, -0.0289537, 0.12, -0.136561, 0.028927, 0.0879914, -0.136561, -0.0289537, 0, -0.104265, -0.136561, 0.0879914, 0.028927, -0.136561, 0.12, -0.0289537, -0.104265, 0, -0.0289537, 0.028927, 0.12, -0.136561, 0.136561, 0.0879914, -0.0289537, 0.028927, 0, -0.104265, -0.136561, 0.12, 0.028927, -0.104265, 0, 0.028927, -0.0289537, 0.0879914, 0.136561, 0.136561, 0.12, -0.0289537, 0.136561, 0.0879914, 0.028927, 0.104239, 0, -0.0289537, -0.0289537, 0.12, 0.136561, -0.0289537, 0, 0.104239, 0.028927, 0.0879914, 0.136561, 0.136561, 0.12, 0.028927, 0.104239, 0, 0.028927, 0.028927, 0.12, 0.136561, 0.028927, 0, 0.104239 )
+
+[node name="fireBasket" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="fireBasket" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "heart"
@@ -74,7 +74,11 @@ surfaces/3 = {
 "vertex_count": 332
 }
 
-[node name="flowersLow" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -0.0353683, 0.1, -0.381948, -0.0306575, 0, -0.267693, -0.0724564, 0.075, -0.327213, -0.285414, 0.1, -0.131977, 0.131902, 0.1, -0.285414, 0.0771672, 0.075, -0.322502, 0.0240774, 0.075, -0.353085, 0.0176468, 0, -0.280629, -0.280629, 0, -0.0177216, -0.322502, 0.075, -0.077242, -0.381948, 0.1, 0.0352935, 0.285339, 0.1, -0.131977, 0.322427, 0.075, -0.077242, 0.280554, 0, -0.0177216, -0.267693, 0, 0.0305827, -0.353085, 0.075, -0.0241522, -0.327213, 0.075, 0.0723817, -0.0353683, 0.1, 0.381948, 0.381948, 0.1, 0.0352935, 0.35301, 0.075, -0.0241522, 0.267618, 0, 0.0305827, -0.0306575, 0, 0.267618, -0.0724564, 0.075, 0.327138, 0.0176468, 0, 0.280554, 0.0240774, 0.075, 0.35301, 0.0771672, 0.075, 0.322427, 0.131902, 0.1, 0.285339, 0.327138, 0.075, 0.0723817 )
+
+[node name="flowersLow" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -84,3 +88,6 @@ material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 6 )

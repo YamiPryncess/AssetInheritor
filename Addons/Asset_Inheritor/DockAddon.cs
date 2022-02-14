@@ -3,11 +3,10 @@ using Godot;
 using System;
 
 [Tool]
-public class BatchInheritor : EditorPlugin {
+public class DockAddon : EditorPlugin {
     PanelContainer dock;
     public override void _EnterTree() {
-        //Spatial glb = (Spatial)GD.Load<PackedScene>("res://Assets/KenneyPlatformer/Source/block.glb").Instance();
-        dock = (PanelContainer)GD.Load<PackedScene>("Addons/Batch_Model_Inheritor/Inherit.tscn").Instance();
+        dock = (PanelContainer)GD.Load<PackedScene>("Addons/Asset_Inheritor/Inherit.tscn").Instance();
         AddControlToDock(DockSlot.LeftUr, dock);
         
     }

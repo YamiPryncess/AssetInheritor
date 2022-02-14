@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "stoneDark"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 270
 }
 
-[node name="wallCornerDetail" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.53, 0, -0.500008, -0.500008, 0, -0.53, -0.53, 0, -0.475012, -0.53, 1, -0.500008, -0.400008, 0, -0.53, -0.500008, 1, -0.53, -0.425004, 0, -0.370016, -0.53, 1, -0.475012, -0.370016, 0, -0.500008, -0.400008, 1, -0.53, -0.400008, 0, -0.370016, -0.425004, 1, -0.370016, -0.370016, 0, -0.400008, -0.370016, 1, -0.500008, -0.400008, 1, -0.370016, -0.370016, 1, -0.400008 )
+
+[node name="wallCornerDetail" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="wallCornerDetail" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

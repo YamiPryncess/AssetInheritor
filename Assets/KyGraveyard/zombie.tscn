@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "metal"
@@ -216,7 +216,26 @@ surfaces/1 = {
 "vertex_count": 54
 }
 
-[node name="zombie" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=12]
+points = PoolVector3Array( 0, -3.83556e-05, 0.065, 0, -3.83556e-05, -0.0650074, -0.065, -3.83556e-05, 0.065, 0, -0.188803, 0.0649821, -0.065, -3.83556e-05, -0.0650074, 0, -0.358162, -0.117539, -0.13, -0.0650053, 0.0649821, -0.13, -0.188803, 0.0649821, -0.13, -0.324145, 0.0299609, 0, -0.391796, 0.0124503, -0.0601135, -0.358162, -0.117539, -0.13, -0.290511, -0.100029, -0.13, -0.0650053, -0.0650074, -0.0601135, -0.391796, 0.0124503 )
+
+[sub_resource type="ConvexPolygonShape" id=13]
+points = PoolVector3Array( 0.055796, 0, 0.0557807, -3.36009e-10, 0, 0.0557807, 0.111592, -0.0558006, 0.0557807, 0.055796, 0, -0.0558023, -3.36009e-10, 0, -0.0558023, -3.36009e-10, -0.162069, 0.0557807, 0.111592, -0.0558006, -0.0558023, 0.111592, -0.162069, 0.0557807, 0.111592, -0.249374, -0.0858646, 0.0515905, -0.307446, -0.100896, -3.36009e-10, -0.307446, -0.100896, -3.36009e-10, -0.336318, 0.0106873, 0.111592, -0.278246, 0.0257184, 0.0515905, -0.336318, 0.0106873 )
+
+[sub_resource type="ConvexPolygonShape" id=14]
+points = PoolVector3Array( 0.13, 0.26, 0.1, 0.13, 0.26, -0.1, -0.13, 0.26, 0.1, 0.13, 0, 0.1, 0.13, 0, -0.1, -0.13, 0.26, -0.1, -0.13, 0, 0.1, -0.13, 0, -0.1 )
+
+[sub_resource type="ConvexPolygonShape" id=15]
+points = PoolVector3Array( 0.399863, 1.19231, -0.192345, 0.499864, 0.99997, 0.5, 0.399863, 1.19231, -0.5, -0.400006, 1.19231, -0.192345, 0.499864, 0, 0.5, 0.730769, 0.533597, 0.0768402, 0.499864, 0.99997, -0.5, -0.500008, 0.99997, 0.5, -0.400006, 1.19231, -0.5, 0.499864, 0, -0.5, 0.730769, 0.274035, 0.0768402, -0.500008, 0, 0.5, 0.730769, 0.533597, -0.0769381, -0.500008, 0.99997, -0.5, -0.730769, 0.533597, 0.0768402, 0.730769, 0.274035, -0.0769381, -0.500008, 0, -0.5, -0.730769, 0.274035, 0.0768402, -0.730769, 0.533597, -0.0769381, -0.730769, 0.274035, -0.0769381 )
+
+[sub_resource type="ConvexPolygonShape" id=16]
+points = PoolVector3Array( 0.111592, -0.223184, 0.075796, 0, -0.223184, 0.075796, 0.111592, -0.223184, -0.1, 0.111592, 0, 0.0557832, 0, -0.223184, -0.1, 0, 0, 0.0557832, 0.111592, -0.154236, -0.1, 0.111592, 0, -0.0558101, 0, -0.154236, -0.1, 0, 0, -0.0558101 )
+
+[sub_resource type="ConvexPolygonShape" id=17]
+points = PoolVector3Array( 0, -0.26, 0.0882992, -0.13, -0.26, 0.0882992, 0, -0.26, -0.116496, 0, 0, 0.0649851, -0.13, -0.26, -0.116496, -0.13, 0, 0.0649851, 0, -0.179679, -0.116496, 0, 0, -0.0650164, -0.13, -0.179679, -0.116496, -0.13, 0, -0.0650164 )
+
+[node name="zombie" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -257,3 +276,24 @@ transform = Transform( 0.8584, 0, 0, 0, 0.8584, 0, 0, 0, 0.8584, 0, 0, 0 )
 mesh = SubResource( 11 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.8584, 0, 0, 0, 0.8584, 0, 0, 0, 0.8584, 0, 0, 0 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+shape = SubResource( 13 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="."]
+shape = SubResource( 14 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="."]
+transform = Transform( 0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, 0, 0, 0 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="."]
+shape = SubResource( 16 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="."]
+transform = Transform( 0.8584, 0, 0, 0, 0.8584, 0, 0, 0, 0.8584, 0, 0, 0 )
+shape = SubResource( 17 )

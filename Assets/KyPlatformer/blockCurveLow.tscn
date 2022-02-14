@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "grass"
@@ -39,7 +39,11 @@ surfaces/1 = {
 "vertex_count": 164
 }
 
-[node name="blockCurveLow" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -0.789293, 0, -0.5, -0.789293, 0, 0.5, -0.707242, 0.107087, -0.5, 0.789293, 0, -0.5, -0.707242, 0.107087, 0.5, 0.789293, 0, 0.5, -0.50003, 0.266014, -0.5, 0.707088, 0.107087, -0.5, -0.50003, 0.266014, 0.5, 0.707088, 0.107087, 0.5, -0.258822, 0.365897, -0.5, 0.499875, 0.266014, -0.5, -0.258822, 0.365897, 0.5, 0.499875, 0.266014, 0.5, 5.96046e-08, 0.4, -0.5, 0.258668, 0.365897, -0.5, 5.96046e-08, 0.4, 0.5, 0.258668, 0.365897, 0.5 )
+
+[node name="blockCurveLow" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -47,3 +51,6 @@ surfaces/1 = {
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )

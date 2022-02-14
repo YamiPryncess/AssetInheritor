@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "metal"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 1008
 }
 
-[node name="ironFenceDamaged" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( 0.234045, 0.843641, 0.45, 0.251958, 0.772332, 0.4275, 0.207028, 0.77522, 0.4275, -0.437549, 0.824493, 0.45, 0.207028, 0.77522, 0.4725, 0.251958, 0.772332, 0.4725, 0.459965, 0.754422, 0.4725, 0.437451, 0.824493, 0.45, 0.459965, 0.754422, 0.4275, -0.460063, 0.754422, 0.4275, -0.460063, 0.754422, 0.4725, 0.365897, 0.749305, 0.4725, 0.452428, 0.000553463, 0.464999, 0.5, 0.0905984, 0.457497, 0.5, 0.62443, 0.457497, 0.5, 0.62443, 0.442499, 0.5, 0.0905984, 0.442499, 0.452428, 0.000553463, 0.434997, 0.365897, 0.749305, 0.4275, -0.267424, 0.749965, 0.4275, -0.452525, 0.000553463, 0.434997, -0.5, 0.0905984, 0.442499, -0.5, 0.62443, 0.442499, -0.5, 0.62443, 0.457497, -0.5, 0.0905984, 0.457497, -0.452525, 0.000553463, 0.464999, -0.267424, 0.749965, 0.4725, -0.353465, 0.000470929, 0.464999, -0.353465, 0.000470929, 0.434997 )
+
+[node name="ironFenceDamaged" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="ironFenceDamaged" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

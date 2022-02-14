@@ -8,3 +8,13 @@ L:\Projects\Games\Plugins\.mono\temp\obj\Debug\Plugins.csproj.CoreCompileInputs.
 L:\Projects\Games\Plugins\.mono\temp\obj\Debug\Plugins.csproj.CopyComplete
 L:\Projects\Games\Plugins\.mono\temp\obj\Debug\Plugins.dll
 L:\Projects\Games\Plugins\.mono\temp\obj\Debug\Plugins.pdb
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\bin\Debug\Plugins.dll
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\bin\Debug\Plugins.pdb
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\bin\Debug\Newtonsoft.Json.dll
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\obj\Debug\Plugins.csprojAssemblyReference.cache
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\obj\Debug\Plugins.AssemblyInfoInputs.cache
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\obj\Debug\Plugins.AssemblyInfo.cs
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\obj\Debug\Plugins.csproj.CoreCompileInputs.cache
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\obj\Debug\Plugins.csproj.CopyComplete
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\obj\Debug\Plugins.dll
+L:\Projects\GameDev\MyTools\Plugins\.mono\temp\obj\Debug\Plugins.pdb

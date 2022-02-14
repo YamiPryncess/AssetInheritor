@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "wood"
@@ -75,7 +75,11 @@ surfaces/3 = {
 "vertex_count": 98
 }
 
-[node name="roof" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -0.5, -2.43075e-05, -0.5, -0.5, -2.43075e-05, 0.5, -0.5, 0.625902, -0.5, 0.544625, -0.0223607, -0.5, -0.5, 0.625902, 0.5, 0.544625, -0.0223607, 0.5, -0.400039, 0.575899, -0.5, 0.567082, 0.0223121, -0.5, -0.400039, 0.575899, 0.5, 0.567082, 0.0223121, 0.5 )
+
+[node name="roof" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -85,3 +89,6 @@ material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 6 )

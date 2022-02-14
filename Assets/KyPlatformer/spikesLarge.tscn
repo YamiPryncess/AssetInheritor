@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "metal"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 432
 }
 
-[node name="spikesLarge" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.290536, 0, -0.287527, -0.290536, 0, 0.287471, -0.284109, 0.0256429, -0.281167, 0.290536, 0, -0.287527, -0.284109, 0.0256429, 0.28111, 0.290536, 0, 0.287471, -0.218528, 0.269514, -0.21604, 0.284052, 0.0256429, -0.281167, -0.218528, 0.269514, 0.215983, 0.284052, 0.0256429, 0.28111, 0.218471, 0.269514, -0.21604, 0.218471, 0.269514, 0.215983 )
+
+[node name="spikesLarge" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="spikesLarge" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

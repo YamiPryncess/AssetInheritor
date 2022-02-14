@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=22 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "skin"
@@ -294,7 +294,29 @@ surfaces/1 = {
 "vertex_count": 54
 }
 
-[node name="vampire" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=15]
+points = PoolVector3Array( 0, -0.289283, 0.0714462, -0.130002, -0.289283, 0.0714462, 0, -0.391796, 0.0124591, 0, -3.83556e-05, 0.0649834, -0.161412, -0.281421, 0.0410187, -0.130002, -0.324145, 0.029961, -0.0601031, -0.391796, 0.0124591, -0.0650011, -3.83556e-05, 0.0649834, -0.130002, -0.0650053, 0.0649834, 0, -0.358162, -0.117544, 0, -3.83556e-05, -0.0650011, -0.161412, -0.247749, -0.0889658, -0.130002, -0.290511, -0.100042, -0.0601031, -0.358162, -0.117544, -0.0650011, -3.83556e-05, -0.0650011, -0.130002, -0.0650053, -0.0650011, 0, -0.239887, -0.119375, -0.130002, -0.239887, -0.119375 )
+
+[sub_resource type="ConvexPolygonShape" id=16]
+points = PoolVector3Array( 0.11158, -0.248321, 0.0613294, -3.36009e-10, -0.248321, 0.0613294, 0.0515789, -0.336318, 0.0106949, 0.11158, -0.278246, 0.0257185, 0.138556, -0.241572, 0.0352105, 0.11158, -0.0558006, 0.0557817, 0.0557833, 0, 0.0557817, -3.36009e-10, -0.336318, 0.0106949, -3.36009e-10, 0, 0.0557817, 0.0515789, -0.307446, -0.1009, 0.11158, -0.249374, -0.0858763, 0.138556, -0.212668, -0.0763683, 0.11158, -0.0558006, -0.055797, 0.0557833, 0, -0.055797, -3.36009e-10, -0.307446, -0.1009, -3.36009e-10, 0, -0.055797, 0.11158, -0.205919, -0.102471, -3.36009e-10, -0.205919, -0.102471 )
+
+[sub_resource type="ConvexPolygonShape" id=17]
+points = PoolVector3Array( 0.13, 0.26, 0.1, 0.13, 0, 0.1, 0.13, 0.26, -0.1, -0.13, 0.26, 0.1, 0.13, 0, -0.1, -0.13, 0, 0.1, -0.13, 0.26, -0.1, -0.13, 0, -0.1 )
+
+[sub_resource type="ConvexPolygonShape" id=18]
+points = PoolVector3Array( -0.19, -0.483184, 0.0349964, 0.19, -0.483184, 0.0349964, -0.170025, 0.0849444, 0.118897, -0.130002, -3.8445e-05, 0, 0.129965, -3.8445e-05, 0, 0.169988, 0.0849444, 0.118897 )
+
+[sub_resource type="ConvexPolygonShape" id=19]
+points = PoolVector3Array( -0.500008, 1.19231, 0.5, -0.500008, 1.19231, -0.5, -0.730769, 0.533597, 0.0768402, -0.500008, 0, 0.5, 0.499864, 0.99997, 0.5, -0.500008, 0, -0.5, -0.730769, 0.533597, -0.0769381, 0.499864, 0.99997, -0.5, -0.730769, 0.274035, 0.0768402, 0.499864, 0, 0.5, 0.730769, 0.533597, 0.0768402, -0.730769, 0.274035, -0.0769381, 0.499864, 0, -0.5, 0.730769, 0.533597, -0.0769381, 0.730769, 0.274035, 0.0768402, 0.730769, 0.274035, -0.0769381 )
+
+[sub_resource type="ConvexPolygonShape" id=20]
+points = PoolVector3Array( 0.111592, -0.223184, 0.075796, 0, -0.223184, 0.075796, 0.111592, -0.223184, -0.1, 0.111592, 0, 0.0557832, 0, -0.223184, -0.1, 0, 0, 0.0557832, 0.111592, -0.154236, -0.1, 0.111592, 0, -0.0558101, 0, -0.154236, -0.1, 0, 0, -0.0558101 )
+
+[sub_resource type="ConvexPolygonShape" id=21]
+points = PoolVector3Array( 0, -0.26, 0.0882992, -0.13, -0.26, 0.0882992, 0, -0.26, -0.116496, 0, 0, 0.0649851, -0.13, -0.26, -0.116496, -0.13, 0, 0.0649851, 0, -0.179679, -0.116496, 0, 0, -0.0650164, -0.13, -0.179679, -0.116496, -0.13, 0, -0.0650164 )
+
+[node name="vampire" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -343,3 +365,27 @@ transform = Transform( 0.8584, 0, 0, 0, 0.8584, 0, 0, 0, 0.8584, 0, 0, 0 )
 mesh = SubResource( 14 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.8584, 0, 0, 0, 0.8584, 0, 0, 0, 0.8584, 0, 0, 0 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+shape = SubResource( 16 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="."]
+shape = SubResource( 17 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="."]
+shape = SubResource( 18 )
+
+[node name="CollisionShape5" type="CollisionShape" parent="."]
+transform = Transform( 0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="."]
+shape = SubResource( 20 )
+
+[node name="CollisionShape7" type="CollisionShape" parent="."]
+transform = Transform( 0.8584, 0, 0, 0, 0.8584, 0, 0, 0, 0.8584, 0, 0, 0 )
+shape = SubResource( 21 )

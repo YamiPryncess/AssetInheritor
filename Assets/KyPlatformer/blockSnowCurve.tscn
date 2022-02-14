@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "snow"
@@ -39,7 +39,11 @@ surfaces/1 = {
 "vertex_count": 236
 }
 
-[node name="blockSnowCurve" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( 0, 1, 0.5, 0.25881, 0.965838, 0.5, 0, 1, -0.5, -0.259005, 0.965838, 0.5, 0.25881, 0.965838, -0.5, 0.5, 0.865995, 0.5, -0.259005, 0.965838, -0.5, -0.5, 0.865995, 0.5, 0.5, 0.865995, -0.5, 0.70693, 0.707028, 0.5, -0.5, 0.865995, -0.5, -0.707126, 0.707028, 0.5, 0.70693, 0.707028, -0.5, 0.865897, 0.5, 0.5, -0.707126, 0.707028, -0.5, -0.866092, 0.5, 0.5, 0.865897, 0.5, -0.5, 0.96574, 0.25881, 0.5, -0.866092, 0.5, -0.5, -0.965936, 0.25881, 0.5, 0.96574, 0.25881, -0.5, 1, 0, 0.5, -0.965936, 0.25881, -0.5, -1, 0, 0.5, 1, 0, -0.5, -1, 0, -0.5 )
+
+[node name="blockSnowCurve" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -47,3 +51,6 @@ surfaces/1 = {
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )

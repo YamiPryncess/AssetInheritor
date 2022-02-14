@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "pumpkin"
@@ -39,7 +39,11 @@ surfaces/1 = {
 "vertex_count": 106
 }
 
-[node name="pumpkinTall" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( 0.00839342, 0.26, 0.00840176, 0.0528949, 0.189986, 0.0916169, 0.10579, 0.189986, -2.35885e-05, 0.00839342, 0.26, -0.00842534, -0.00842068, 0.26, 0.00840176, 0.0696, 0.0699883, 0.120527, 0.1392, 0.0699883, -2.35885e-05, -0.0529222, 0.189986, 0.0916169, 0.0528949, 0.189986, -0.0916405, -0.00842068, 0.26, -0.00842534, -0.105817, 0.189986, -2.35885e-05, -0.0696, 0.0699883, 0.120527, 0.0599803, 0, 0.103913, 0.119988, 0, -2.35885e-05, 0.0696, 0.0699883, -0.120551, -0.1392, 0.0699883, -2.35885e-05, -0.0529222, 0.189986, -0.0916405, -0.0600075, 0, 0.103913, 0.0599803, 0, -0.103936, -0.0696, 0.0699883, -0.120551, -0.120015, 0, -2.35885e-05, -0.0600075, 0, -0.103936 )
+
+[node name="pumpkinTall" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -47,3 +51,6 @@ surfaces/1 = {
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )

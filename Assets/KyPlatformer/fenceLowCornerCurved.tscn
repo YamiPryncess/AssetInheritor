@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "woodDark"
@@ -39,7 +39,11 @@ surfaces/1 = {
 "vertex_count": 204
 }
 
-[node name="fenceLowCornerCurved" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( 0.449912, 0.2, 0.45, 0.449912, 1.00185e-32, 0.45, 0.449912, 0.2, 0.349922, 0.349922, 0.2, 0.45, 0.349922, 1.00185e-32, 0.45, 0.449912, 1.00185e-32, 0.349922, 0.393706, 0.169988, 0.150646, 0.361374, 0.169988, 0.055325, 0.316797, 0.169988, -0.0350626, 0.260855, 0.169988, -0.118755, 0.19443, 0.169988, -0.194518, -0.35001, 0.2, -0.45, -0.45, 0.2, -0.35001, -0.45, 1.00185e-32, -0.35001, 0.260855, 0.0699883, -0.118755, 0.316797, 0.0699883, -0.0350626, 0.361374, 0.0699883, 0.055325, 0.393706, 0.0699883, 0.150646, -0.35001, 1.00185e-32, -0.45, 0.19443, 0.0699883, -0.194518, 0.118667, 0.169988, -0.260944, 0.0349745, 0.169988, -0.316885, -0.0554131, 0.169988, -0.361462, -0.150734, 0.169988, -0.393794, -0.45, 0.2, -0.45, -0.45, 1.00185e-32, -0.45, -0.150734, 0.0699883, -0.393794, -0.0554131, 0.0699883, -0.361462, 0.0349745, 0.0699883, -0.316885, 0.118667, 0.0699883, -0.260944 )
+
+[node name="fenceLowCornerCurved" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -47,3 +51,6 @@ surfaces/1 = {
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )

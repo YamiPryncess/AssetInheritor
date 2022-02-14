@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "roofRed"
@@ -75,7 +75,11 @@ surfaces/3 = {
 "vertex_count": 127
 }
 
-[node name="roofHighRight" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -0.5, -8.29399e-05, -0.5, 0.570697, -0.0707107, -0.5, -0.5, -8.29399e-05, 0.5, -0.5, 1.19071, -0.5, 0.64131, -0.000823796, -0.5, 0.570697, -0.0707107, -0.400059, 0.535279, -0.0353968, 0.5, -0.5, 1.1407, 0.5, -0.5, 1.19071, -0.400059, -0.400003, 1.0907, -0.5, 0.64131, -0.000823796, -0.400059, 0.570697, -8.29399e-05, 0.5, -0.400003, 1.04069, 0.5, -0.400003, 1.0907, -0.400059 )
+
+[node name="roofHighRight" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -85,3 +89,6 @@ material/0 = null
 material/1 = null
 material/2 = null
 material/3 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 6 )

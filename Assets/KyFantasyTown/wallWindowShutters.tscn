@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "wood"
@@ -108,7 +108,20 @@ surfaces/1 = {
 "vertex_count": 36
 }
 
-[node name="wallWindowShutters" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=7]
+points = PoolVector3Array( -0.40001, 1, 0.5, -0.40001, 1, -0.5, -0.5, 1, 0.5, -0.40001, 0, 0.5, -0.5, 1, -0.5, -0.40001, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5 )
+
+[sub_resource type="ConvexPolygonShape" id=8]
+points = PoolVector3Array( 0.01875, 0.269969, 0, 0.025, 0.4, -0.0800215, 0.00625, 0.269969, 0, 0.01875, 0.129992, 0, 0.025, 0.4, -0.220008, 0, 0.4, -0.0800215, 0.025, 0, -0.0800215, 0.00625, 0.129992, 0, 0.01875, 0.269969, -0.3, 0, 0.4, -0.220008, 0.025, 0, -0.220008, 0, 0, -0.0800215, 0.00625, 0.269969, -0.3, 0.01875, 0.129992, -0.3, 0, 0, -0.220008, 0.00625, 0.129992, -0.3 )
+
+[sub_resource type="ConvexPolygonShape" id=9]
+points = PoolVector3Array( 0, 0, -0.05, 0.15, 0, -0.05, 0, 0, 0, 0, 0.5, -0.05, 0.15, 0, 0, 0.15, 0.5, -0.05, 0, 0.5, 0, 0.15, 0.5, 0 )
+
+[sub_resource type="ConvexPolygonShape" id=10]
+points = PoolVector3Array( 0.0216461, 0.5, 0, 0.0966506, 0.5, -0.129914, 0, 0.5, -0.0125035, 0.0216461, 0, 0, 0.0749951, 0.5, -0.142404, 0.0966506, 0, -0.129914, 0, 0, -0.0125035, 0.0749951, 0, -0.142404 )
+
+[node name="wallWindowShutters" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -133,3 +146,18 @@ transform = Transform( 1, 0, 8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.421651
 mesh = SubResource( 6 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 7 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4625, 0.3, 0.15 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.5, -0.346651, 0.25, -0.342404 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="."]
+transform = Transform( -1, 0, 0, 0, -1, 0, 0, 0, -1, -0.421651, 0.25, 0.2 )
+shape = SubResource( 10 )

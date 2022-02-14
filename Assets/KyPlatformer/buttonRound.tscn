@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "metal"
@@ -59,7 +59,14 @@ surfaces/0 = {
 "vertex_count": 36
 }
 
-[node name="buttonRound" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -0.145, 5.46466e-33, -0.251147, -0.29, 5.46466e-33, -4.9144e-05, -0.116045, 0.09, -0.200947, 0.145, 5.46466e-33, -0.251147, -0.232034, 0.09, -4.9144e-05, -0.145, 5.46466e-33, 0.251147, -0.116045, 0.09, 0.200898, 0.115989, 0.09, -0.200947, 0.29, 5.46466e-33, -4.9144e-05, 0.145, 5.46466e-33, 0.251147, 0.115989, 0.09, 0.200898, 0.231977, 0.09, -4.9144e-05 )
+
+[sub_resource type="ConvexPolygonShape" id=7]
+points = PoolVector3Array( -0.0866028, 0, -0.15, -0.173206, 0, 0, -0.0866028, 0.095, -0.15, 0.0866028, 0, -0.15, -0.173206, 0.095, 0, -0.0866028, 0, 0.15, 0.0866028, 0.095, -0.15, 0.173206, 0, 0, -0.0866028, 0.095, 0.15, 0.0866028, 0, 0.15, 0.173206, 0.095, 0, 0.0866028, 0.095, 0.15 )
+
+[node name="buttonRound" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -72,3 +79,10 @@ material/1 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045, 0 )
 mesh = SubResource( 5 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 6 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.045, 0 )
+shape = SubResource( 7 )

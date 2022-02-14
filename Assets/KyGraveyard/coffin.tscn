@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "woodDark"
@@ -54,7 +54,14 @@ surfaces/0 = {
 "vertex_count": 84
 }
 
-[node name="coffin" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( 0.296342, 0.2052, 0.25, 0.128239, 0.2052, 0.5, 0.296342, 0, 0.25, 0.128239, 0.2052, -0.5, -0.128297, 0.2052, 0.5, 0.128239, 0, 0.5, 0.128239, 0, -0.5, -0.128297, 0.2052, -0.5, -0.128297, 0, 0.5, -0.2964, 0.2052, 0.25, -0.128297, 0, -0.5, -0.2964, 0, 0.25 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( 0.52, 0.359987, 0.4325, 0.495364, 0.544672, 0.4325, 0.22498, 0.359987, 0.865, 0.52, 0, 0.4325, 0.22498, 0.359987, -0.865, -0.495466, 0.544672, 0.4325, 0.274558, 0.544672, -0.538508, 0.22498, 0, 0.865, -0.225082, 0.359987, 0.865, 0.22498, 0, -0.865, -0.225082, 0.359987, -0.865, -0.52, 0.359987, 0.4325, -0.274659, 0.544672, -0.538508, -0.225082, 0, 0.865, -0.225082, 0, -0.865, -0.52, 0, 0.4325 )
+
+[node name="coffin" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -67,3 +74,10 @@ material/1 = null
 transform = Transform( 0.57, 0, 0, 0, 0.1083, 0, 0, 0, 0.578035, 0, 0.2052, 0 )
 mesh = SubResource( 4 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 0.57, 0, 0, 0, 0.1083, 0, 0, 0, 0.578035, 0, 0.2052, 0 )
+shape = SubResource( 6 )

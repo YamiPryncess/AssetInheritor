@@ -10,12 +10,13 @@ config_version=4
 
 [application]
 
-config/name="Plugins"
+config/name="Asset Inheritor"
+run/main_scene="res://Scenes/Spatial.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Batch_Model_Inheritor/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Asset_Inheritor/plugin.cfg" )
 
 [importer_defaults]
 

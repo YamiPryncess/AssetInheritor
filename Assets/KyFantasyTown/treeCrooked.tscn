@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "foliage"
@@ -39,7 +39,11 @@ surfaces/1 = {
 "vertex_count": 368
 }
 
-[node name="treeCrooked" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -0.5115, 0.485303, 0, -0.361695, 0.485303, -0.361695, -0.144398, -1.72236e-17, -0.144398, -0.144398, -1.72236e-17, 0.144297, -0.361695, 0.485303, 0.361595, -0.300211, 1.36286, 0, -0.141794, 1.7589, -0.152609, 0, 0.485303, -0.5115, 0, 1.76079, -0.211289, 0.144297, -1.72236e-17, -0.144398, 0.144297, -1.72236e-17, 0.144297, 0, 0.485303, 0.5115, 0.0261357, 1.00036, 0.429988, -0.261558, 0.958089, 0.313629, -0.217798, 1.35601, 0.199573, -0.200474, 1.75417, -0.0110151, 0, 2.41258, 0.0109149, 0.361595, 0.485303, -0.361695, 0.141694, 1.7589, -0.152609, 0.313729, 0.965882, -0.268367, 0.5115, 0.485303, 0, 0.361595, 0.485303, 0.361595, 0.313729, 1.0202, 0.307721, -0.141794, 1.74945, 0.130679, 0.432892, 1.00579, 0.0184252, 0.200374, 1.75417, -0.0110151 )
+
+[node name="treeCrooked" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -47,3 +51,6 @@ surfaces/1 = {
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )

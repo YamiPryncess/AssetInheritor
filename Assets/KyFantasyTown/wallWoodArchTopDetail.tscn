@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "stoneDark"
@@ -57,7 +57,11 @@ surfaces/2 = {
 "vertex_count": 376
 }
 
-[node name="wallWoodArchTopDetail" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( -0.425004, 1, 0.5, -0.475012, 1, 0.5, -0.370016, 0.899961, 0.5, -0.400008, 1, -0.400059, -0.500008, 1, -0.400059, -0.53, 0.899961, 0.5, -0.370016, 0.892228, 0.382439, -0.400008, 1, -0.5, -0.370016, 0.69998, 0.5, -0.500008, 1, -0.5, -0.53, 0.892228, 0.382439, -0.53, 0.69998, 0.5, -0.370016, 0.779366, 0.0499217, -0.370016, 0.713978, -0.047964, -0.370016, 0.344362, -0.331539, -0.370016, 0.23287, -0.369421, -0.400008, -5.17849e-16, -0.5, -0.400008, -5.17849e-16, -0.200078, -0.370016, 0.181088, -0.176194, -0.53, 0.713978, -0.047964, -0.53, 0.779366, 0.0499217, -0.500008, -5.17849e-16, -0.5, -0.53, 0.23287, -0.369421, -0.53, 0.344362, -0.331539, -0.53, 0.181088, -0.176194, -0.500008, -5.17849e-16, -0.200078 )
+
+[node name="wallWoodArchTopDetail" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -66,3 +70,6 @@ mesh = SubResource( 4 )
 material/0 = null
 material/1 = null
 material/2 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 5 )

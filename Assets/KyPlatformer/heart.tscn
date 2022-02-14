@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "heart"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 80
 }
 
-[node name="heart" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( 0.103017, 0.383869, 0, 0.0762235, 0.333932, 0.0595, 0.152487, 0.277118, 0.0595, 0.206074, 0.307065, 0, 0.152487, 0.277118, -0.0595, 0.0762235, 0.333932, -0.0595, -0.103057, 0.383869, 0, -0.0762638, 0.333932, 0.0595, 0.152487, 0.163528, 0.0595, 0.206074, 0.153533, 0, 0.152487, 0.163528, -0.0595, -0.0762638, 0.333932, -0.0595, -0.152528, 0.277118, -0.0595, -0.206114, 0.307065, 0, -0.152528, 0.277118, 0.0595, -4.03523e-05, 0.0499, 0.0595, -4.03523e-05, 0, 0, -4.03523e-05, 0.0499, -0.0595, -0.152528, 0.163528, -0.0595, -0.206114, 0.153533, 0, -0.152528, 0.163528, 0.0595 )
+
+[node name="heart" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="heart" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

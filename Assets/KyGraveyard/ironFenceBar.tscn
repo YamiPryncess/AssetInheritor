@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "metal"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 48
 }
 
-[node name="ironFenceBar" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.0225, 0.663858, -0.0225, -0.0225, 0.663858, 0.0224956, -4.40329e-06, 0.7339, -4.40329e-06, 0.0224956, 0.663858, -0.0225, -0.0150029, 0, -0.0150029, 0.0224956, 0.663858, 0.0224956, -0.0150029, 0, 0.0149985, 0.0149985, 0, -0.0150029, 0.0149985, 0, 0.0149985 )
+
+[node name="ironFenceBar" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="ironFenceBar" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

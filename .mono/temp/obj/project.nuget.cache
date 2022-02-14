@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QEr6xca1FD6ghSKcfbxet6/bHYLARkP3K0eKBKJr8RUHmPIRiNsUyvUiyoZx4j0FDoy0OyB84FDFtCHZd5m7UQ==",
+  "dgSpecHash": "2QLSOiPBjn6NliuQB1p5bKusQDqdrtEYSxgP4zE8FuxUa6GLewfC+x6UTJv20EqtuQJLw0DwBBvA9a3FOMMmaw==",
   "success": true,
-  "projectFilePath": "L:\\Projects\\Games\\Plugins\\Plugins.csproj",
+  "projectFilePath": "L:\\Projects\\GameDev\\MyTools\\Asset_Inheritor\\Asset Inheritor.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\zen86\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\zen86\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512",
     "C:\\Users\\zen86\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512"
   ],
   "logs": []

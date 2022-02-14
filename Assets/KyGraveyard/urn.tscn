@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "metal"
@@ -66,7 +66,14 @@ surfaces/1 = {
 "vertex_count": 84
 }
 
-[node name="urn" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( -0.087108, 0.269976, -0.087108, -0.087108, 0.269976, 0.087108, -0.087108, 0.31, -0.087108, 0.087108, 0.269976, -0.087108, -0.0750002, 0, -0.0750002, 0.087108, 0.269976, 0.087108, -0.087108, 0.31, 0.087108, -0.0750002, 0, 0.0749831, 0.087108, 0.31, -0.087108, 0.0749831, 0, -0.0750002, 0.087108, 0.31, 0.087108, 0.0749831, 0, 0.0749831 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( -0.087108, 0, -0.087108, -0.087108, 0, 0.087108, -0.087108, 0.02, -0.087108, 0.087108, 0, -0.087108, -0.087108, 0.02, 0.087108, 0.087108, 0, 0.087108, -0.0136767, 0.08, -0.0136767, 0.087108, 0.02, -0.087108, 0.087108, 0.02, 0.087108, -0.0136767, 0.08, 0.0136596, 0.0136596, 0.08, -0.0136767, 0.0136596, 0.08, 0.0136596 )
+
+[node name="urn" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -80,3 +87,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31, 0 )
 mesh = SubResource( 4 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31, 0 )
+shape = SubResource( 6 )

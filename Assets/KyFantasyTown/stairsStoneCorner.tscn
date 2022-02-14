@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "stone"
@@ -38,7 +38,11 @@ surfaces/1 = {
 "vertex_count": 228
 }
 
-[node name="stairsStoneCorner" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=4]
+points = PoolVector3Array( -8.41916e-05, 1, -0.280051, 0.144988, 0.5, 0.5, 0.52, 0.125, 0.5, -8.41916e-05, 1, -0.5, -0.5, 1, -0.280051, -0.5, 0.5, 0.5, 0.52, 0.0874119, 0.5, 0.52, 0.125, 0, -8.41916e-05, 0, -0.5, -0.5, 1, -0.5, -0.5, 0, 0.5, 0.52, 0.0874119, 0, 0.499931, 0, 0.5, -0.5, 0, -0.5, 0.499931, 0, 0 )
+
+[node name="stairsStoneCorner" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -46,3 +50,6 @@ surfaces/1 = {
 mesh = SubResource( 3 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 4 )

@@ -2,7 +2,7 @@
 using Godot;
 using System.Linq;
 [Tool]
-public class Vector3Editor : VBoxContainer {
+public class VectorDisplay : VBoxContainer {
     public SpinBox[] spinBoxes = new SpinBox[3];
     public override void _Ready() {
         int i = 0;

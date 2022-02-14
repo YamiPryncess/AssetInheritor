@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "wood"
@@ -54,7 +54,14 @@ surfaces/0 = {
 "vertex_count": 112
 }
 
-[node name="wallWindowGlass" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( -0.40001, 1, 0.5, -0.40001, 1, -0.5, -0.5, 1, 0.5, -0.40001, 0, 0.5, -0.5, 1, -0.5, -0.40001, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( 0.01875, 0.269969, 0, 0.025, 0.4, -0.0800073, 0.00625, 0.269969, 0, 0.01875, 0.129992, 0, 0.025, 0.4, -0.105012, 0, 0.4, -0.0800073, 0.025, 0, -0.0800073, 0.00625, 0.129992, 0, 0.01875, 0.269969, -0.1925, 0, 0.4, -0.105012, 0.025, 0, -0.105012, 0, 0, -0.0800073, 0.00625, 0.269969, -0.1925, 0.01875, 0.129992, -0.1925, 0, 0, -0.105012, 0.00625, 0.129992, -0.1925 )
+
+[node name="wallWindowGlass" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -67,3 +74,10 @@ material/1 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4625, 0.3, 0.0925 )
 mesh = SubResource( 4 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4625, 0.3, 0.0925 )
+shape = SubResource( 6 )

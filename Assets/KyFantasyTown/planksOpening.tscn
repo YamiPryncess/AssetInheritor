@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "wood"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 384
 }
 
-[node name="planksOpening" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.5, 0.03, -0.5, -0.5, 0, -0.35141, -0.5, 0.06, -0.5, 0.5, 0.03, -0.5, -0.5, 0, 0.351312, 0.5, 0, -0.35141, -0.5, 0.06, 0.5, 0.5, 0.06, -0.5, -0.5, 0.03, 0.5, 0.5, 0, 0.351312, 0.5, 0.06, 0.5, 0.5, 0.03, 0.5 )
+
+[node name="planksOpening" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="planksOpening" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

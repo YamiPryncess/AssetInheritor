@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "L:\\Projects\\Games\\Plugins\\Plugins.csproj": {}
+    "l:\\Projects\\GameDev\\MyTools\\Asset_Inheritor\\Plugins.csproj": {}
   },
   "projects": {
-    "L:\\Projects\\Games\\Plugins\\Plugins.csproj": {
+    "l:\\Projects\\GameDev\\MyTools\\Asset_Inheritor\\Plugins.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "L:\\Projects\\Games\\Plugins\\Plugins.csproj",
+        "projectUniqueName": "l:\\Projects\\GameDev\\MyTools\\Asset_Inheritor\\Plugins.csproj",
         "projectName": "Plugins",
-        "projectPath": "L:\\Projects\\Games\\Plugins\\Plugins.csproj",
+        "projectPath": "l:\\Projects\\GameDev\\MyTools\\Asset_Inheritor\\Plugins.csproj",
         "packagesPath": "C:\\Users\\zen86\\.nuget\\packages\\",
-        "outputPath": "L:\\Projects\\Games\\Plugins\\.mono\\temp\\obj\\",
+        "outputPath": "l:\\Projects\\GameDev\\MyTools\\Asset_Inheritor\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\zen86\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\zen86\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,12 +36,17 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[11.0.2, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.415\\RuntimeIdentifierGraph.json"
         }
       }
     }

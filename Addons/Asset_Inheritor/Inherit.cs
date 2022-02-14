@@ -18,7 +18,7 @@ public class Inherit : PanelContainer {
     bool alterTranslation;
     Vector3 translation;
     Preset preset = new Preset();
-    string presetPath = "res://Addons/Batch_Model_Inheritor/Preset.json";
+    string presetPath = "res://Addons/Asset_Inheritor/Preset.json";
     public override void _Ready() {
         File file = new File();
         if(file.FileExists(presetPath) && file.Open(presetPath, File.ModeFlags.Read) == Error.Ok) {
@@ -33,11 +33,11 @@ public class Inherit : PanelContainer {
                 list.GetNode<OptionButton>("Collision").Selected = preset.collision;
 
                 list.GetNode<CheckBox>("Scaling/Alter").Pressed = preset.alterScaling;
-                list.GetNode<Vector3Editor>("Scaling").setValue(preset.scaling);
+                list.GetNode<VectorDisplay>("Scaling").setValue(preset.scaling);
                 list.GetNode<CheckBox>("Rotation/Alter").Pressed = preset.alterRotation;
-                list.GetNode<Vector3Editor>("Rotation").setValue(preset.rotation);
+                list.GetNode<VectorDisplay>("Rotation").setValue(preset.rotation);
                 list.GetNode<CheckBox>("Translation/Alter").Pressed = preset.alterTranslation;
-                list.GetNode<Vector3Editor>("Translation").setValue(preset.translation);
+                list.GetNode<VectorDisplay>("Translation").setValue(preset.translation);
             }
         }
         file.Close();
@@ -52,11 +52,11 @@ public class Inherit : PanelContainer {
         collision = list.GetNode<OptionButton>("Collision").Text;
 
         alterScaling = list.GetNode<CheckBox>("Scaling/Alter").Pressed;
-        scaling = list.GetNode<Vector3Editor>("Scaling").getValue();
+        scaling = list.GetNode<VectorDisplay>("Scaling").getValue();
         alterRotation = list.GetNode<CheckBox>("Rotation/Alter").Pressed;
-        rotation = list.GetNode<Vector3Editor>("Rotation").getValue();
+        rotation = list.GetNode<VectorDisplay>("Rotation").getValue();
         alterTranslation = list.GetNode<CheckBox>("Translation/Alter").Pressed;
-        translation = list.GetNode<Vector3Editor>("Translation").getValue();
+        translation = list.GetNode<VectorDisplay>("Translation").getValue();
     }
     public void _Preset_Pressed() {
         gatherNodes();

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "stone"
@@ -65,7 +65,11 @@ surfaces/2 = {
 "vertex_count": 79
 }
 
-[node name="fountainCornerInnerSquare" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( -0.5, 5.20387e-18, -0.5, -0.5, 5.20387e-18, 0.5, -0.5, 0.14, -0.5, 0.5, 5.20387e-18, -0.5, -0.5, 0.14, 0.5, 0.5, 5.20387e-18, 0.5, 0.19998, 0.28, 0.19998, 0.5, 0.14, -0.5, 0.19998, 0.28, 0.5, 0.5, 0.28, 0.5, 0.5, 0.28, 0.19998 )
+
+[node name="fountainCornerInnerSquare" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -74,3 +78,6 @@ mesh = SubResource( 4 )
 material/0 = null
 material/1 = null
 material/2 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 5 )

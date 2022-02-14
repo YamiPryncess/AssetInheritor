@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "metal"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 180
 }
 
-[node name="doorOpen" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.3, 0, -0.1, -0.3, 0, 0.1, -0.3, 0.69998, -0.1, 0.3, 0, -0.1, 0.3, 0, 0.1, -0.3, 0.69998, 0.1, -0.289781, 0.777604, -0.1, 0.3, 0.69998, -0.1, 0.3, 0.69998, 0.1, -0.289781, 0.777604, 0.1, -0.259828, 0.849941, -0.1, 0.289722, 0.777604, -0.1, 0.289722, 0.777604, 0.1, -0.259828, 0.849941, 0.1, -0.212138, 0.912099, -0.1, 0.259769, 0.849941, -0.1, 0.259769, 0.849941, 0.1, -0.212138, 0.912099, 0.1, -0.15, 0.959769, -0.1, 0.212079, 0.912099, -0.1, 0.212079, 0.912099, 0.1, -0.15, 0.959769, 0.1, -0.0777017, 0.989722, -0.1, 0.15, 0.959769, -0.1, 0.15, 0.959769, 0.1, -0.0777017, 0.989722, 0.1, 0, 1, -0.1, 0.0776429, 0.989722, -0.1, 0.0776429, 0.989722, 0.1, 0, 1, 0.1 )
+
+[node name="doorOpen" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="doorOpen" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )

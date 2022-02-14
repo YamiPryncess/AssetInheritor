@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "woodDark"
@@ -66,7 +66,14 @@ surfaces/1 = {
 "vertex_count": 218
 }
 
-[node name="wallWoodDoor" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( -0.40001, 1, 0.5, -0.40001, 1, -0.5, -0.5, 1, 0.5, -0.40001, -3.6136e-21, 0.5, -0.5, 1, -0.5, -0.40001, -3.6136e-21, -0.5, -0.5, -3.6136e-21, 0.5, -0.5, -3.6136e-21, -0.5 )
+
+[sub_resource type="ConvexPolygonShape" id=6]
+points = PoolVector3Array( 0.025, 0.549946, 0, 0.025, 0.601703, -0.006852, -0.025, 0.549946, 0, 0.025, 0, 0, -0.025, 0.601703, -0.006852, 0.025, 0.649936, -0.0268207, -0.025, 0, 0, 0.025, 0, -0.4, -0.025, 0.649936, -0.0268207, 0.025, 0.691415, -0.058614, -0.025, 0, -0.4, 0.025, 0.549946, -0.4, -0.025, 0.691415, -0.058614, 0.025, 0.723204, -0.1, -0.025, 0.549946, -0.4, 0.025, 0.601703, -0.393187, -0.025, 0.723204, -0.1, 0.025, 0.743172, -0.148238, -0.025, 0.601703, -0.393187, 0.025, 0.649936, -0.373218, -0.025, 0.743172, -0.148238, 0.025, 0.75, -0.2, -0.025, 0.649936, -0.373218, 0.025, 0.691415, -0.341425, -0.025, 0.75, -0.2, 0.025, 0.743172, -0.251801, -0.025, 0.691415, -0.341425, 0.025, 0.723204, -0.300039, -0.025, 0.743172, -0.251801, -0.025, 0.723204, -0.300039 )
+
+[node name="wallWoodDoor" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
@@ -80,3 +87,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45, -1.8068e-21, 0.2 )
 mesh = SubResource( 4 )
 material/0 = null
 material/1 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 5 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45, -1.8068e-21, 0.2 )
+shape = SubResource( 6 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "stone"
@@ -21,10 +21,17 @@ surfaces/0 = {
 "vertex_count": 238
 }
 
-[node name="rocks" type="Spatial"]
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.353976, 0, -0.407406, -0.467091, 0, -0.211519, -0.371899, 0.290011, -0.211519, -0.306334, 0.290011, -0.324936, -0.127746, 0, -0.407406, -0.418352, 0, 0.00701874, -0.275518, 0.465696, 0.211439, -0.210045, 0.465696, 0.0979433, -0.175388, 0.290011, -0.324936, 0.318222, 0, -0.237441, -0.370802, 0, 0.211439, -0.210045, 0.465696, 0.324856, -0.0790069, 0.465696, 0.0979433, 0.255492, 0.101973, -0.12889, 0.341723, 0.101973, 0.0204182, 0.467091, 0, 0.0204182, -0.257687, 0, 0.407326, -0.0790069, 0.465696, 0.324856, -0.0135336, 0.465696, 0.211439, 0.318222, 0, 0.278197, -0.031365, 0, 0.407326 )
+
+[node name="rocks" type="StaticBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 
 [node name="rocks" type="MeshInstance" parent="tmpParent"]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )
