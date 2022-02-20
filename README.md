@@ -17,4 +17,5 @@ UX/UI Specifics
 Last fully tested on Godot 3.3
 
 Main Code is in the Addons/Asset_Inheritor folder.
+
 More specifically the Inherit.cs file.
