@@ -1,8 +1,8 @@
 # Asset Inheritor
 
 Inherits, customizes, and creates collisions for 3D models in godot.
-- Recreates model’s folder file structure into new folder as .TSCN
-- Traverses scene tree depth first editing & restructuring mesh transforms.
+- Recreates recursive folders of 3D models as TSCN godot game objects with collision physics via C#.
+- Traverses scene tree depth first editing & restructuring mesh transforms. This helps do things like aligning the mesh origin for a bunch of files at once.
 
 Transforms Specifics
 - Moves or Rotates parent meshes while preserving transforms of child meshes.
